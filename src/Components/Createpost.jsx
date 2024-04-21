@@ -45,14 +45,14 @@ function Createpost() {
     <form className="create-post" onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="userID" className="form-label">
-          Enter Your Username
+          Enter Username
         </label>
         <input
           ref={userIdElement}
           type="text"
           className="form-control"
           id="userID"
-          placeholder="Enter your User Id "
+          placeholder="Enter random User Id between 1 to 100 digits"
         />
       </div>
       <div className="mb-3">
