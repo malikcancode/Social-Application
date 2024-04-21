@@ -2,16 +2,16 @@ import { useContext } from "react";
 import Post from "./Post";
 import { PostList } from "./Store/Post-list-store";
 import WelcomeMessage from "./WelcomeMessage";
+import Loading from "./Loading";
 
 function ListPost() {
-  const { postList } = useContext(PostList);
+  const { postList, loading } = useContext(PostList);
 
   return (
     <>
-      {postList.length === 0 && <WelcomeMessage />}
-      {postList.map((post) => (
-        <Post key={post.id} post={post} />
-      ))}
+      {loading && <Loading />}
+      {!loading && postList.length === 0 && <WelcomeMessage />}
+      {!loading && postList.map((post) => <Post key={post.id} post={post} />)}
     </>
   );
 }

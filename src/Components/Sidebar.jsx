@@ -8,7 +8,7 @@ function Sidebar({ selectedTab, setselectedTab }) {
         <svg className="bi pe-none me-2" width="40" height="32">
           <use xlinkHref="#bootstrap"></use>
         </svg>
-        <span className="fs-4">be Social.co</span>
+        <span className="fs-4">miniSocial</span>
       </a>
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
